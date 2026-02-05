@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatech | Automatización Inteligente para Pymes y Autónomos</title>
+    <meta name="description" content="Automatiza tus procesos de negocio y potencia tu empresa con agentes inteligentes de chat y voz. Soluciones personalizadas para pymes y profesionales autónomos.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logos/automatech-favicon.svg">
+    
+    <!-- Google Fonts - Lexend Deca & Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="dist/output.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="font-lexend bg-light-50 text-text-primary antialiased overflow-x-hidden">
+    
+    <!-- Header / Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center group">
+                    <img src="assets/logos/automatech-logo.svg" alt="Automatech" class="h-10 w-auto">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#servicios" class="text-text-secondary hover:text-text-primary transition-colors duration-200">Servicios</a>
+                    <a href="#beneficios" class="text-text-secondary hover:text-text-primary transition-colors duration-200">Beneficios</a>
+                    <a href="#proceso" class="text-text-secondary hover:text-text-primary transition-colors duration-200">Proceso</a>
+                    <a href="#faq" class="text-text-secondary hover:text-text-primary transition-colors duration-200">FAQ</a>
+                    <a href="#contacto" class="btn-cta px-5 py-2.5 bg-accent text-white font-semibold rounded-lg">
+                        Solicitar Demo
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-text-secondary hover:text-text-primary transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col gap-4 pt-4 border-t border-light-300">
+                    <a href="#servicios" class="text-text-secondary hover:text-text-primary transition-colors duration-200">Servicios</a>
+                    <a href="#beneficios" class="text-text-secondary hover:text-text-primary transition-colors duration-200">Beneficios</a>
+                    <a href="#proceso" class="text-text-secondary hover:text-text-primary transition-colors duration-200">Proceso</a>
+                    <a href="#faq" class="text-text-secondary hover:text-text-primary transition-colors duration-200">FAQ</a>
+                    <a href="#contacto" class="btn-cta px-5 py-2.5 bg-accent text-white font-semibold rounded-lg text-center">
+                        Solicitar Demo
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Particles Background -->
+        <div id="particles-js" class="absolute inset-0"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-on-scroll">
+                <span class="badge-glow inline-flex items-center gap-2 px-5 py-2.5 bg-white rounded-full text-sm font-medium text-text-primary mb-8">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-text-primary"></i>
+                    Para PYMES y Autónomos
+                </span>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                    Implementa IA en tu negocio y no te quedes atrás
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto mb-10">
+                    Te ayudamos a automatizar tareas repetitivas con agentes virtuales para que puedas centrarte en lo que realmente importa.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#servicios" class="btn-cta group px-8 py-4 bg-accent text-white font-semibold rounded-xl flex items-center justify-center gap-2">
+                        Ver Servicios
+                        <i data-lucide="arrow-down" class="w-5 h-5 group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                    <a href="#contacto" class="btn-cta px-8 py-4 bg-white text-text-primary font-semibold rounded-xl flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                        Agendar Llamada
+                    </a>
+                </div>
+                
+                <!-- Social Proof - Avatares -->
+                <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 animate-on-scroll" style="animation-delay: 0.4s;">
+                    <!-- Avatares Solapados -->
+                    <div class="flex">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                        <img src="https://i.pravatar.cc/150?img=25" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover" style="margin-left: -12px;">
+                        <img src="https://i.pravatar.cc/150?img=33" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover" style="margin-left: -12px;">
+                        <img src="https://i.pravatar.cc/150?img=47" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover" style="margin-left: -12px;">
+                        <img src="https://i.pravatar.cc/150?img=56" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover" style="margin-left: -12px;">
+                        <img src="https://i.pravatar.cc/150?img=65" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover" style="margin-left: -12px;">
+                        <img src="https://i.pravatar.cc/150?img=8" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover" style="margin-left: -12px;">
+                        <img src="https://i.pravatar.cc/150?img=19" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover" style="margin-left: -12px;">
+                        <img src="https://i.pravatar.cc/150?img=31" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover" style="margin-left: -12px;">
+                        <img src="https://i.pravatar.cc/150?img=44" alt="Usuario" class="w-10 h-10 rounded-full border-2 border-white object-cover" style="margin-left: -12px;">
+                    </div>
+                    
+                    <!-- Texto -->
+                    <p class="text-text-secondary text-sm text-center sm:text-left">
+                        <span class="font-semibold text-text-primary">324 profesionales</span> ya confían en las soluciones de Automatech ❤️
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-text-secondary text-sm font-semibold uppercase tracking-wider">Nuestros Servicios</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+                    Soluciones que impulsan tu negocio
+                </h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Tres soluciones de IA diseñadas para transformar la manera en que operas y atiendes a tus clientes.
+                </p>
+            </div>
+            
+            <div class="grid gap-4 md:gap-6" style="grid-template-columns: repeat(1, 1fr);" data-responsive-grid="md:3">
+                <!-- Service Card 1: Agentes de Procesos -->
+                <div class="group bg-white border border-light-300 rounded-2xl hover:shadow-lg transition-all duration-300 animate-on-scroll" style="padding: 1.5rem;">
+                    <img src="assets/images/agente-procesos.webp" alt="Agentes de Procesos" class="w-full rounded-lg mb-6" style="aspect-ratio: 1/1; object-fit: cover;">
+                    
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i data-lucide="workflow" class="w-5 h-5 text-text-primary"></i>
+                        Agentes de Procesos
+                    </h3>
+                    <p class="text-text-secondary mb-6">
+                        Automatiza tareas operativas y administrativas de tu negocio.
+                    </p>
+                    
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Gestión de cobros automática</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Sistema de reservas inteligente</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Calendario sincronizado</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Generación de presupuestos</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contacto" class="btn-cta w-full py-3 px-4 bg-white text-text-primary font-semibold rounded-lg flex items-center justify-center gap-2 text-sm">
+                        <i data-lucide="workflow" class="w-4 h-4"></i>
+                        Solicitar Demo
+                    </a>
+                </div>
+                
+                <!-- Service Card 2: Agentes Telefónicos -->
+                <div class="group bg-white border border-light-300 rounded-2xl hover:shadow-lg transition-all duration-300 animate-on-scroll" style="padding: 1.5rem; animation-delay: 0.15s;">
+                    <img src="assets/images/agente-telefónico.webp" alt="Agentes Telefónicos" class="w-full rounded-lg mb-6" style="aspect-ratio: 1/1; object-fit: cover;">
+                    
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i data-lucide="phone" class="w-5 h-5 text-text-primary"></i>
+                        Agentes Telefónicos
+                    </h3>
+                    <p class="text-text-secondary mb-6">
+                        Asistentes de voz que gestionan llamadas de forma natural.
+                    </p>
+                    
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Atención telefónica 24/7</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Voces naturales y humanas</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Gestión de citas y consultas</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Integración con tu CRM</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contacto" class="btn-cta w-full py-3 px-4 bg-white text-text-primary font-semibold rounded-lg flex items-center justify-center gap-2 text-sm">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        Probar Ahora
+                    </a>
+                </div>
+                
+                <!-- Service Card 3: Agentes Conversacionales -->
+                <div class="group bg-white border border-light-300 rounded-2xl hover:shadow-lg transition-all duration-300 animate-on-scroll" style="padding: 1.5rem; animation-delay: 0.3s;">
+                    <img src="assets/images/agente-conversacional.webp" alt="Agentes Conversacionales" class="w-full rounded-lg mb-6" style="aspect-ratio: 1/1; object-fit: cover;">
+                    
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i data-lucide="message-square" class="w-5 h-5 text-text-primary"></i>
+                        Agentes Conversacionales
+                    </h3>
+                    <p class="text-text-secondary mb-6">
+                        Chatbots inteligentes para atender a tus clientes por chat.
+                    </p>
+                    
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Chat en web y WhatsApp</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Respuestas instantáneas</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Aprendizaje continuo</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-text-secondary text-sm">
+                            <i data-lucide="check" class="w-4 h-4 mt-0.5 text-text-secondary flex-shrink-0"></i>
+                            <span>Múltiples idiomas</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contacto" class="btn-cta w-full py-3 px-4 bg-white text-text-primary font-semibold rounded-lg flex items-center justify-center gap-2 text-sm">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        Probar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section id="beneficios" class="py-24 bg-light-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-text-secondary text-sm font-semibold uppercase tracking-wider">Beneficios</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+                    ¿Por qué implementar IA en tu negocio?
+                </h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Descubre las ventajas de automatizar tu negocio con nosotros.
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Benefit 1 -->
+                <div class="group bg-white border border-light-300 rounded-xl p-6 hover:shadow-md transition-all duration-300 animate-on-scroll">
+                    <div class="w-10 h-10 bg-light-200 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="clock" class="w-5 h-5 text-text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Ahorro de Tiempo</h3>
+                    <p class="text-text-secondary text-sm">Reduce hasta un 80% el tiempo dedicado a tareas repetitivas y administrativas.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="group bg-white border border-light-300 rounded-xl p-6 hover:shadow-md transition-all duration-300 animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="w-10 h-10 bg-light-200 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Reducción de Errores</h3>
+                    <p class="text-text-secondary text-sm">Elimina errores humanos con procesos automatizados y precisos.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="group bg-white border border-light-300 rounded-xl p-6 hover:shadow-md transition-all duration-300 animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="w-10 h-10 bg-light-200 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="sun" class="w-5 h-5 text-text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Disponibilidad 24/7</h3>
+                    <p class="text-text-secondary text-sm">Tus sistemas trabajan incluso mientras duermes, sin descanso ni vacaciones.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="group bg-white border border-light-300 rounded-xl p-6 hover:shadow-md transition-all duration-300 animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="w-10 h-10 bg-light-200 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="trending-up" class="w-5 h-5 text-text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Escalabilidad</h3>
+                    <p class="text-text-secondary text-sm">Crece sin necesidad de contratar más personal para tareas operativas.</p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="group bg-white border border-light-300 rounded-xl p-6 hover:shadow-md transition-all duration-300 animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="w-10 h-10 bg-light-200 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="bar-chart-2" class="w-5 h-5 text-text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">ROI Rápido</h3>
+                    <p class="text-text-secondary text-sm">Recupera tu inversión en semanas gracias al aumento de productividad.</p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="group bg-white border border-light-300 rounded-xl p-6 hover:shadow-md transition-all duration-300 animate-on-scroll" style="animation-delay: 0.5s;">
+                    <div class="w-10 h-10 bg-light-200 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="settings" class="w-5 h-5 text-text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Sin Conocimientos Técnicos</h3>
+                    <p class="text-text-secondary text-sm">Nosotros nos encargamos de todo. Tú solo disfrutas de los resultados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso Section -->
+    <section id="proceso" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-text-secondary text-sm font-semibold uppercase tracking-wider">Nuestro Proceso</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+                    Cómo trabajamos contigo
+                </h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Un proceso simple y transparente para llevar tu negocio al siguiente nivel.
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-light-300 transform -translate-y-1/2"></div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="relative animate-on-scroll">
+                        <div class="bg-white border border-light-300 rounded-2xl p-6 hover:shadow-md transition-all duration-300 lg:text-center">
+                            <div class="w-10 h-10 bg-text-primary rounded-full flex items-center justify-center text-white font-semibold mb-4 lg:mx-auto relative z-10">
+                                1
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Análisis</h3>
+                            <p class="text-text-secondary text-sm">Estudiamos tus procesos actuales e identificamos oportunidades.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="relative animate-on-scroll" style="animation-delay: 0.1s;">
+                        <div class="bg-white border border-light-300 rounded-2xl p-6 hover:shadow-md transition-all duration-300 lg:text-center">
+                            <div class="w-10 h-10 bg-text-primary rounded-full flex items-center justify-center text-white font-semibold mb-4 lg:mx-auto relative z-10">
+                                2
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Diseño</h3>
+                            <p class="text-text-secondary text-sm">Creamos una solución personalizada para tu negocio.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="relative animate-on-scroll" style="animation-delay: 0.2s;">
+                        <div class="bg-white border border-light-300 rounded-2xl p-6 hover:shadow-md transition-all duration-300 lg:text-center">
+                            <div class="w-10 h-10 bg-text-primary rounded-full flex items-center justify-center text-white font-semibold mb-4 lg:mx-auto relative z-10">
+                                3
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Implementación</h3>
+                            <p class="text-text-secondary text-sm">Integramos las automatizaciones en tu flujo de trabajo.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="relative animate-on-scroll" style="animation-delay: 0.3s;">
+                        <div class="bg-white border border-light-300 rounded-2xl p-6 hover:shadow-md transition-all duration-300 lg:text-center">
+                            <div class="w-10 h-10 bg-text-primary rounded-full flex items-center justify-center text-white font-semibold mb-4 lg:mx-auto relative z-10">
+                                4
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Soporte</h3>
+                            <p class="text-text-secondary text-sm">Te acompañamos con soporte y optimizaciones continuas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section id="testimonios" class="py-24 bg-light-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-on-scroll">
+                <span class="text-text-secondary text-sm font-semibold uppercase tracking-wider">Testimonios</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+                    Lo que dicen nuestros clientes
+                </h2>
+            </div>
+        </div>
+        
+        <!-- Row 1: moves LEFT -->
+        <div class="marquee-row marquee-left mb-4">
+            <div class="marquee-track">
+                <!-- 12 testimonials duplicated for infinite effect -->
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de reservas automático nos ha liberado de horas de llamadas. Nuestros clientes reservan cuando quieren."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">María González</div>
+                            <div class="text-text-secondary text-xs">Peluquería Estilos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Mis clientes reciben recordatorios automáticos y ya no hay cancelaciones de última hora. Increíble."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=3" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Carlos Ruiz</div>
+                            <div class="text-text-secondary text-xs">Entrenador Personal</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La gestión de citas se hace sola. Puedo centrarme en mis pacientes en lugar de la agenda."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=44" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Ana Martínez</div>
+                            <div class="text-text-secondary text-xs">Clínica Dental Sonrisa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El chatbot responde consultas sobre menús y horarios 24/7. Menos llamadas, más reservas."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=7" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Roberto Sánchez</div>
+                            <div class="text-text-secondary text-xs">Restaurante La Brasa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Automaticé mis presupuestos y cobros. Ahorro 10 horas semanales en administración."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=9" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Laura Fernández</div>
+                            <div class="text-text-secondary text-xs">Fotografía Creativa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El agente telefónico atiende llamadas fuera de horario. No perdemos ningún cliente potencial."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Miguel Torres</div>
+                            <div class="text-text-secondary text-xs">Inmobiliaria Torres</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Mis pacientes reciben seguimiento automático de sus dietas. Los resultados han mejorado un 40%."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=47" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Elena Vega</div>
+                            <div class="text-text-secondary text-xs">Nutricionista Clínica</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La automatización de facturas me permite cobrar más rápido. Mi flujo de caja mejoró enormemente."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=15" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">David López</div>
+                            <div class="text-text-secondary text-xs">Taller Mecánico AutoPro</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El bot de WhatsApp gestiona el 80% de consultas de mis alumnos. Puedo dar más clases."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=16" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Patricia Moreno</div>
+                            <div class="text-text-secondary text-xs">Academia de Inglés</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Pasé de gestionar citas por teléfono a tener todo automatizado. Gano 2 horas diarias."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=17" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Javier Herrera</div>
+                            <div class="text-text-secondary text-xs">Barbería Classic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de recordatorios redujo las citas perdidas en un 70%. Inversión que se paga sola."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=20" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Carmen Díaz</div>
+                            <div class="text-text-secondary text-xs">Fisioterapia Activa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Automatech nos ayudó a escalar sin contratar más personal administrativo. Genial."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=52" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Andrés Molina</div>
+                            <div class="text-text-secondary text-xs">Gimnasio FitZone</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate for infinite scroll -->
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de reservas automático nos ha liberado de horas de llamadas. Nuestros clientes reservan cuando quieren."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">María González</div>
+                            <div class="text-text-secondary text-xs">Peluquería Estilos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Mis clientes reciben recordatorios automáticos y ya no hay cancelaciones de última hora. Increíble."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=3" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Carlos Ruiz</div>
+                            <div class="text-text-secondary text-xs">Entrenador Personal</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La gestión de citas se hace sola. Puedo centrarme en mis pacientes en lugar de la agenda."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=44" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Ana Martínez</div>
+                            <div class="text-text-secondary text-xs">Clínica Dental Sonrisa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El chatbot responde consultas sobre menús y horarios 24/7. Menos llamadas, más reservas."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=7" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Roberto Sánchez</div>
+                            <div class="text-text-secondary text-xs">Restaurante La Brasa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Automaticé mis presupuestos y cobros. Ahorro 10 horas semanales en administración."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=9" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Laura Fernández</div>
+                            <div class="text-text-secondary text-xs">Fotografía Creativa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El agente telefónico atiende llamadas fuera de horario. No perdemos ningún cliente potencial."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Miguel Torres</div>
+                            <div class="text-text-secondary text-xs">Inmobiliaria Torres</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Mis pacientes reciben seguimiento automático de sus dietas. Los resultados han mejorado un 40%."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=47" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Elena Vega</div>
+                            <div class="text-text-secondary text-xs">Nutricionista Clínica</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La automatización de facturas me permite cobrar más rápido. Mi flujo de caja mejoró enormemente."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=15" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">David López</div>
+                            <div class="text-text-secondary text-xs">Taller Mecánico AutoPro</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El bot de WhatsApp gestiona el 80% de consultas de mis alumnos. Puedo dar más clases."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=16" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Patricia Moreno</div>
+                            <div class="text-text-secondary text-xs">Academia de Inglés</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Pasé de gestionar citas por teléfono a tener todo automatizado. Gano 2 horas diarias."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=17" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Javier Herrera</div>
+                            <div class="text-text-secondary text-xs">Barbería Classic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de recordatorios redujo las citas perdidas en un 70%. Inversión que se paga sola."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=20" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Carmen Díaz</div>
+                            <div class="text-text-secondary text-xs">Fisioterapia Activa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Automatech nos ayudó a escalar sin contratar más personal administrativo. Genial."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=52" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Andrés Molina</div>
+                            <div class="text-text-secondary text-xs">Gimnasio FitZone</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Row 2: moves RIGHT -->
+        <div class="marquee-row marquee-right mb-4">
+            <div class="marquee-track">
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El agente de voz contesta llamadas como si fuera una persona. Mis clientes no notan la diferencia."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=22" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Rosa Navarro</div>
+                            <div class="text-text-secondary text-xs">Abogada Autónoma</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Integré el chatbot en mi web y las consultas se resuelven solas. Mejor experiencia para todos."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=53" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Fernando Ramos</div>
+                            <div class="text-text-secondary text-xs">Cafetería El Aroma</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La facturación automática me ahorró contratar un administrativo. ROI en menos de 3 meses."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=24" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Silvia Castro</div>
+                            <div class="text-text-secondary text-xs">Estudio de Yoga</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Los recordatorios por WhatsApp aumentaron la asistencia a mis clases un 50%."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=54" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Pablo Jiménez</div>
+                            <div class="text-text-secondary text-xs">Profesor de Piano</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Gestiono 3 locales con el mismo sistema de reservas. Centralizado y eficiente."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=26" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Lucía Serrano</div>
+                            <div class="text-text-secondary text-xs">Centros de Estética Bella</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El seguimiento automático de leads me ayuda a no perder ninguna oportunidad de venta."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=61" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Alberto Ortega</div>
+                            <div class="text-text-secondary text-xs">Agente Inmobiliario</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Mis clientes pueden pedir cita incluso a las 3am. El sistema trabaja mientras duermo."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=28" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Isabel Romero</div>
+                            <div class="text-text-secondary text-xs">Podología Avanzada</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El chatbot resuelve dudas sobre nuestro menú y alérgenos. Los camareros agradecidos."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=55" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Diego Vargas</div>
+                            <div class="text-text-secondary text-xs">Pizzería Napoli</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Reduje el tiempo de gestión administrativa en un 60%. Ahora me dedico a entrenar."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=30" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Marcos Delgado</div>
+                            <div class="text-text-secondary text-xs">CrossFit Box</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de cobros automáticos eliminó la morosidad. Todos pagan a tiempo."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=31" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Beatriz Muñoz</div>
+                            <div class="text-text-secondary text-xs">Gestoría Eficaz</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Implementé el agente de voz para emergencias 24h. Mis clientes se sienten seguros."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Raúl Prieto</div>
+                            <div class="text-text-secondary text-xs">Clínica Veterinaria</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Las encuestas automáticas post-servicio me dan feedback valioso constantemente."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=48" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Cristina Lozano</div>
+                            <div class="text-text-secondary text-xs">Spa Relax</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate for infinite scroll -->
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El agente de voz contesta llamadas como si fuera una persona. Mis clientes no notan la diferencia."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=22" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Rosa Navarro</div>
+                            <div class="text-text-secondary text-xs">Abogada Autónoma</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Integré el chatbot en mi web y las consultas se resuelven solas. Mejor experiencia para todos."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=53" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Fernando Ramos</div>
+                            <div class="text-text-secondary text-xs">Cafetería El Aroma</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La facturación automática me ahorró contratar un administrativo. ROI en menos de 3 meses."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=24" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Silvia Castro</div>
+                            <div class="text-text-secondary text-xs">Estudio de Yoga</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Los recordatorios por WhatsApp aumentaron la asistencia a mis clases un 50%."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=54" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Pablo Jiménez</div>
+                            <div class="text-text-secondary text-xs">Profesor de Piano</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Gestiono 3 locales con el mismo sistema de reservas. Centralizado y eficiente."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=26" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Lucía Serrano</div>
+                            <div class="text-text-secondary text-xs">Centros de Estética Bella</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El seguimiento automático de leads me ayuda a no perder ninguna oportunidad de venta."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=61" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Alberto Ortega</div>
+                            <div class="text-text-secondary text-xs">Agente Inmobiliario</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Mis clientes pueden pedir cita incluso a las 3am. El sistema trabaja mientras duermo."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=28" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Isabel Romero</div>
+                            <div class="text-text-secondary text-xs">Podología Avanzada</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El chatbot resuelve dudas sobre nuestro menú y alérgenos. Los camareros agradecidos."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=55" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Diego Vargas</div>
+                            <div class="text-text-secondary text-xs">Pizzería Napoli</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Reduje el tiempo de gestión administrativa en un 60%. Ahora me dedico a entrenar."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=30" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Marcos Delgado</div>
+                            <div class="text-text-secondary text-xs">CrossFit Box</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de cobros automáticos eliminó la morosidad. Todos pagan a tiempo."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=31" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Beatriz Muñoz</div>
+                            <div class="text-text-secondary text-xs">Gestoría Eficaz</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Implementé el agente de voz para emergencias 24h. Mis clientes se sienten seguros."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Raúl Prieto</div>
+                            <div class="text-text-secondary text-xs">Clínica Veterinaria</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Las encuestas automáticas post-servicio me dan feedback valioso constantemente."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=48" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Cristina Lozano</div>
+                            <div class="text-text-secondary text-xs">Spa Relax</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Row 3: moves LEFT -->
+        <div class="marquee-row marquee-left">
+            <div class="marquee-track">
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El bot de Instagram responde mensajes al instante. Mi tasa de conversión subió un 35%."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=26" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Natalia Flores</div>
+                            <div class="text-text-secondary text-xs">Tienda de Moda Online</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Automaticé el envío de presupuestos. Los clientes reciben respuesta en segundos."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=56" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Víctor Campos</div>
+                            <div class="text-text-secondary text-xs">Reformas Integrales</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de citas online triplicó mis reservas. Ya no dependo solo del teléfono."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=23" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Marina Costa</div>
+                            <div class="text-text-secondary text-xs">Salón de Uñas Glamour</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Los informes automáticos me ahorran horas de trabajo cada semana. Datos siempre actualizados."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=57" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Sergio Blanco</div>
+                            <div class="text-text-secondary text-xs">Asesoría Fiscal</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El agente de chat maneja pedidos y consultas. Como tener un empleado 24/7."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=41" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Teresa Gil</div>
+                            <div class="text-text-secondary text-xs">Pastelería Dulce Arte</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Mis pacientes gestionan sus citas solos. Yo me centro en atenderles mejor."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=42" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Jorge Medina</div>
+                            <div class="text-text-secondary text-xs">Psicólogo Clínico</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La integración con mi calendario fue perfecta. Todo sincronizado automáticamente."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=43" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Alicia Reyes</div>
+                            <div class="text-text-secondary text-xs">Coach Personal</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de reservas para mis eventos funciona genial. Cero errores de doble reserva."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=58" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Ricardo Soto</div>
+                            <div class="text-text-secondary text-xs">Salón de Eventos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El chatbot filtra consultas y solo me llegan las importantes. Productividad al máximo."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=25" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Marta Ibáñez</div>
+                            <div class="text-text-secondary text-xs">Arquitecta Freelance</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Automaticé el seguimiento post-venta. Mis clientes se sienten más valorados."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=59" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Óscar Peña</div>
+                            <div class="text-text-secondary text-xs">Concesionario AutoMax</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El bot responde FAQs sobre mis servicios. Libera tiempo para crear contenido."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=48" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Sandra Luna</div>
+                            <div class="text-text-secondary text-xs">Videógrafa Profesional</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La automatización de Automatech nos puso a la altura de empresas más grandes."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=60" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Emilio Rueda</div>
+                            <div class="text-text-secondary text-xs">Clínica Dental Familiar</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate for infinite scroll -->
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El bot de Instagram responde mensajes al instante. Mi tasa de conversión subió un 35%."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=26" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Natalia Flores</div>
+                            <div class="text-text-secondary text-xs">Tienda de Moda Online</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Automaticé el envío de presupuestos. Los clientes reciben respuesta en segundos."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=56" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Víctor Campos</div>
+                            <div class="text-text-secondary text-xs">Reformas Integrales</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de citas online triplicó mis reservas. Ya no dependo solo del teléfono."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=23" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Marina Costa</div>
+                            <div class="text-text-secondary text-xs">Salón de Uñas Glamour</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Los informes automáticos me ahorran horas de trabajo cada semana. Datos siempre actualizados."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=57" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Sergio Blanco</div>
+                            <div class="text-text-secondary text-xs">Asesoría Fiscal</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El agente de chat maneja pedidos y consultas. Como tener un empleado 24/7."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=41" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Teresa Gil</div>
+                            <div class="text-text-secondary text-xs">Pastelería Dulce Arte</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Mis pacientes gestionan sus citas solos. Yo me centro en atenderles mejor."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=42" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Jorge Medina</div>
+                            <div class="text-text-secondary text-xs">Psicólogo Clínico</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La integración con mi calendario fue perfecta. Todo sincronizado automáticamente."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=43" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Alicia Reyes</div>
+                            <div class="text-text-secondary text-xs">Coach Personal</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El sistema de reservas para mis eventos funciona genial. Cero errores de doble reserva."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=58" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Ricardo Soto</div>
+                            <div class="text-text-secondary text-xs">Salón de Eventos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El chatbot filtra consultas y solo me llegan las importantes. Productividad al máximo."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=25" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Marta Ibáñez</div>
+                            <div class="text-text-secondary text-xs">Arquitecta Freelance</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"Automaticé el seguimiento post-venta. Mis clientes se sienten más valorados."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=59" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Óscar Peña</div>
+                            <div class="text-text-secondary text-xs">Concesionario AutoMax</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"El bot responde FAQs sobre mis servicios. Libera tiempo para crear contenido."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=48" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Sandra Luna</div>
+                            <div class="text-text-secondary text-xs">Videógrafa Profesional</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-white border border-light-300 rounded-xl p-5 flex-shrink-0" style="min-width: 260px; max-width: 260px;">
+                    <p class="text-text-secondary text-sm mb-4">"La automatización de Automatech nos puso a la altura de empresas más grandes."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/150?img=60" alt="Avatar" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-semibold text-sm">Emilio Rueda</div>
+                            <div class="text-text-secondary text-xs">Clínica Dental Familiar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-text-secondary text-sm font-semibold uppercase tracking-wider">FAQ</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+                    Preguntas frecuentes
+                </h2>
+                <p class="text-text-secondary text-lg">
+                    Resolvemos tus dudas sobre automatización e inteligencia artificial.
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white border border-light-300 rounded-xl overflow-hidden animate-on-scroll">
+                    <button class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left hover:bg-light-200 transition-colors">
+                        <span class="font-semibold pr-4">¿Cuánto tiempo tarda la implementación?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-text-secondary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-text-secondary">Dependiendo de la complejidad del proyecto, la implementación puede tardar entre 1 y 4 semanas. Los proyectos simples de automatización pueden estar listos en pocos días, mientras que los agentes de IA personalizados requieren más tiempo de entrenamiento y ajuste.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white border border-light-300 rounded-xl overflow-hidden animate-on-scroll" style="animation-delay: 0.1s;">
+                    <button class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left hover:bg-light-200 transition-colors">
+                        <span class="font-semibold pr-4">¿Necesito conocimientos técnicos para usar las automatizaciones?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-text-secondary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-text-secondary">No, para nada. Diseñamos nuestras soluciones para que sean fáciles de usar. Además, te proporcionamos formación completa y soporte continuo para que puedas aprovechar al máximo cada herramienta.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white border border-light-300 rounded-xl overflow-hidden animate-on-scroll" style="animation-delay: 0.2s;">
+                    <button class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left hover:bg-light-200 transition-colors">
+                        <span class="font-semibold pr-4">¿Los agentes de IA pueden integrarse con mis herramientas actuales?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-text-secondary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-text-secondary">Sí, trabajamos con las principales plataformas y herramientas del mercado: CRMs, calendarios, pasarelas de pago, WhatsApp Business, y muchas más. Si usas una herramienta específica, consultanos y te diremos cómo podemos integrarla.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white border border-light-300 rounded-xl overflow-hidden animate-on-scroll" style="animation-delay: 0.3s;">
+                    <button class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left hover:bg-light-200 transition-colors">
+                        <span class="font-semibold pr-4">¿Cuál es el coste de vuestros servicios?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-text-secondary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-text-secondary">Cada proyecto es único, por lo que ofrecemos presupuestos personalizados. Agenda una llamada gratuita con nosotros y te daremos un presupuesto sin compromiso adaptado a tus necesidades específicas.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white border border-light-300 rounded-xl overflow-hidden animate-on-scroll" style="animation-delay: 0.4s;">
+                    <button class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left hover:bg-light-200 transition-colors">
+                        <span class="font-semibold pr-4">¿Qué pasa si algo falla después de la implementación?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-text-secondary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-text-secondary">Todos nuestros proyectos incluyen un período de soporte post-implementación. Además, ofrecemos planes de mantenimiento continuo para garantizar que todo funcione perfectamente y puedas seguir optimizando tus procesos.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="faq-item bg-white border border-light-300 rounded-xl overflow-hidden animate-on-scroll" style="animation-delay: 0.5s;">
+                    <button class="faq-trigger w-full px-6 py-5 flex items-center justify-between text-left hover:bg-light-200 transition-colors">
+                        <span class="font-semibold pr-4">¿Los agentes de voz suenan naturales?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-text-secondary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-text-secondary">Utilizamos la última tecnología en síntesis de voz que produce resultados muy naturales y fluidos. Puedes elegir entre diferentes voces y personalizar el tono para que se adapte a la imagen de tu marca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA + Formulario Section -->
+    <section id="contacto" class="py-24 bg-light-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- CTA Content -->
+                <div class="animate-on-scroll">
+                    <span class="text-text-secondary text-sm font-semibold uppercase tracking-wider">Empieza Hoy</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+                        ¿Listo para automatizar tu negocio?
+                    </h2>
+                    <p class="text-text-secondary text-lg mb-8">
+                        Agenda una consulta gratuita y descubre cómo podemos ayudarte a ahorrar tiempo, reducir costes y hacer crecer tu negocio.
+                    </p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-text-secondary"></i>
+                            <span class="text-text-secondary">Consulta inicial gratuita sin compromiso</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-text-secondary"></i>
+                            <span class="text-text-secondary">Propuesta personalizada en 48h</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-text-secondary"></i>
+                            <span class="text-text-secondary">Soporte continuo incluido</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="animate-on-scroll" style="animation-delay: 0.2s;">
+                    <form id="contact-form" class="bg-white border border-light-300 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">Solicita tu consulta gratuita</h3>
+                        
+                        <div class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Nombre completo</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required
+                                    class="w-full px-4 py-3 bg-light-100 border border-light-300 rounded-xl text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-light-400 transition-colors"
+                                    placeholder="Tu nombre"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full px-4 py-3 bg-light-100 border border-light-300 rounded-xl text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-light-400 transition-colors"
+                                    placeholder="tu@email.com"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium mb-2">Teléfono</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    class="w-full px-4 py-3 bg-light-100 border border-light-300 rounded-xl text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-light-400 transition-colors"
+                                    placeholder="+34 600 000 000"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">¿Qué te gustaría automatizar?</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="4" 
+                                    required
+                                    class="w-full px-4 py-3 bg-light-100 border border-light-300 rounded-xl text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-light-400 transition-colors resize-none"
+                                    placeholder="Cuéntanos sobre tu negocio y qué procesos te gustaría optimizar..."
+                                ></textarea>
+                            </div>
+                            
+                            <button 
+                                type="submit" 
+                                class="w-full py-4 bg-accent text-white font-semibold rounded-xl flex items-center justify-center gap-2"
+                            >
+                                <span>Enviar Solicitud</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Form Success Message -->
+                        <div id="form-success" class="hidden mt-6 p-4 bg-green-500/20 border border-green-500/50 rounded-xl text-center">
+                            <i data-lucide="check-circle" class="w-8 h-8 text-green-400 mx-auto mb-2"></i>
+                            <p class="text-green-400 font-semibold">¡Mensaje enviado correctamente!</p>
+                            <p class="text-text-secondary text-sm mt-1">Te contactaremos en menos de 24h.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-white border-t border-light-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                    <a href="#" class="flex items-center mb-4">
+                        <img src="assets/logos/automatech-logo.svg" alt="Automatech" class="h-10 w-auto">
+                    </a>
+                    <p class="text-text-secondary max-w-md mb-6">
+                        Ayudamos a pymes y profesionales autónomos a transformar sus negocios mediante la automatización inteligente de procesos y agentes de IA.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 bg-light-100 border border-light-300 rounded-lg flex items-center justify-center hover:bg-light-200 transition-colors">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-light-100 border border-light-300 rounded-lg flex items-center justify-center hover:bg-light-200 transition-colors">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-light-100 border border-light-300 rounded-lg flex items-center justify-center hover:bg-light-200 transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Enlaces</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#servicios" class="text-text-secondary hover:text-text-primary transition-colors">Servicios</a></li>
+                        <li><a href="#beneficios" class="text-text-secondary hover:text-text-primary transition-colors">Beneficios</a></li>
+                        <li><a href="#proceso" class="text-text-secondary hover:text-text-primary transition-colors">Proceso</a></li>
+                        <li><a href="#faq" class="text-text-secondary hover:text-text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#contacto" class="text-text-secondary hover:text-text-primary transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-text-secondary">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            <span>hola@automatech.es</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-text-secondary">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            <span>+34 900 000 000</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-text-secondary">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>Madrid, España</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="mt-12 pt-8 border-t border-light-300 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-text-secondary text-sm">
+                    © 2026 Automatech. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-text-secondary hover:text-text-primary transition-colors">Política de Privacidad</a>
+                    <a href="#" class="text-text-secondary hover:text-text-primary transition-colors">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
