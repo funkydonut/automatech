@@ -276,15 +276,61 @@ button[type="submit"].loading::after {
 }
 
 /* ================================
-   Testimonial Carousel
+   Testimonial Marquee
    ================================ */
 
-#testimonial-carousel {
-    position: relative;
+@keyframes marquee-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
-#testimonial-track {
+@keyframes marquee-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.marquee-row {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 1rem;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
     will-change: transform;
+}
+
+.marquee-left .marquee-track {
+    animation-name: marquee-left;
+}
+
+.marquee-right .marquee-track {
+    animation-name: marquee-right;
+}
+
+.marquee-row:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.testimonial-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 /* ================================
