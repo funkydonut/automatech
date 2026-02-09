@@ -207,8 +207,8 @@ MIT License - Ver archivo LICENSE para más detalles.
 
 ## Contacto
 
-- **Web**: [automatech.es](https://automatech.es)
-- **Email**: hola@automatech.es
+- **Web**: [automatech.cx](https://automatech.cx)
+- **Email**: diego@automatech.cx
 
 ---
 
