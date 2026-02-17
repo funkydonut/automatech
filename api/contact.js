@@ -88,7 +88,6 @@ module.exports = async function handler(req, res) {
  
   const name = typeof body.name === 'string' ? body.name.trim() : '';
   const email = typeof body.email === 'string' ? body.email.trim() : '';
-  const phone = typeof body.phone === 'string' ? body.phone.trim() : '';
   const message = typeof body.message === 'string' ? body.message.trim() : '';
  
   if (!name || name.length > 120) {
@@ -97,12 +96,6 @@ module.exports = async function handler(req, res) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email || email.length > 254 || !emailRegex.test(email)) {
     return res.status(400).json({ ok: false, error: 'Email inválido' });
-  }
-  if (phone) {
-    const phoneRegex = /^[\d\s+()-]{9,}$/;
-    if (phone.length > 40 || !phoneRegex.test(phone)) {
-      return res.status(400).json({ ok: false, error: 'Teléfono inválido' });
-    }
   }
   if (!message || message.length > 5000) {
     return res.status(400).json({ ok: false, error: 'Mensaje inválido' });
@@ -119,8 +112,7 @@ module.exports = async function handler(req, res) {
   const text =
     `Nueva solicitud desde Automatech\n\n` +
     `Nombre: ${name}\n` +
-    `Email: ${email}\n` +
-    `Teléfono: ${phone || '-'}\n\n` +
+    `Email: ${email}\n\n` +
     `Mensaje:\n${message}\n\n` +
     `---\n` +
     `IP: ${ip}\n` +
@@ -132,7 +124,6 @@ module.exports = async function handler(req, res) {
       <h2>Nueva solicitud</h2>
       <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-      <p><strong>Teléfono:</strong> ${escapeHtml(phone || '-')}</p>
       <p><strong>Mensaje:</strong></p>
       <pre style="white-space: pre-wrap; background:#f6f6f6; padding:12px; border-radius:8px; border:1px solid #eee;">${escapeHtml(message)}</pre>
       <hr style="border:none;border-top:1px solid #eee;margin:16px 0;" />

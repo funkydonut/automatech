@@ -301,15 +301,6 @@ function validateInput(input) {
         }
     }
     
-    // Phone validation (optional but if filled, validate format)
-    if (input.type === 'tel' && value) {
-        const phoneRegex = /^[\d\s+()-]{9,}$/;
-        if (!phoneRegex.test(value)) {
-            isValid = false;
-            errorMessage = 'Por favor, introduce un teléfono válido';
-        }
-    }
-    
     // Show/hide error
     if (!isValid) {
         showInputError(input, errorMessage);
@@ -369,7 +360,6 @@ async function submitContactForm(form) {
         body: JSON.stringify({
             name: String(data.name || ''),
             email: String(data.email || ''),
-            phone: String(data.phone || ''),
             message: String(data.message || ''),
             // Honeypot (should be empty)
             company: String(data.company || '')
