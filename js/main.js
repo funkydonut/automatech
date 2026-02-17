@@ -216,9 +216,9 @@ function initContactForm() {
         submitBtn.innerHTML = '<span>Enviando...</span>';
         submitBtn.disabled = true;
         
-        // Simulate form submission (replace with actual API call)
+        // Submit form to backend
         try {
-            await simulateFormSubmission(form);
+            await submitContactForm(form);
             
             // Show success message
             if (successMessage) {
@@ -354,19 +354,35 @@ function clearInputError(input) {
 }
 
 /**
- * Simulate form submission (replace with actual API call)
+ * Submit contact form to /api/contact
  */
-function simulateFormSubmission(form) {
-    return new Promise((resolve) => {
-        // Collect form data
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-        
-        console.log('Form submitted with data:', data);
-        
-        // Simulate network delay
-        setTimeout(resolve, 1500);
+async function submitContactForm(form) {
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    
+    const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            name: String(data.name || ''),
+            email: String(data.email || ''),
+            phone: String(data.phone || ''),
+            message: String(data.message || ''),
+            // Honeypot (should be empty)
+            company: String(data.company || '')
+        })
     });
+    
+    const json = await resp.json().catch(() => ({}));
+    
+    if (!resp.ok || !json || json.ok !== true) {
+        throw new Error((json && json.error) ? json.error : 'Request failed');
+    }
+    
+    return json;
 }
 
 /**

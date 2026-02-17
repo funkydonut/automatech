@@ -183,23 +183,24 @@ npm run build
 
 ## Formulario de Contacto
 
-El formulario actualmente simula el envío. Para conectarlo con un backend:
+El formulario envía las solicitudes a `diego@automatech.cx` mediante un endpoint serverless pensado para Vercel (`POST /api/contact`) y el proveedor de email **Resend**.
 
-1. Modificar la función `simulateFormSubmission()` en `js/main.js`
-2. Reemplazar con una llamada real a tu API:
+### Configuración (Vercel + Resend)
 
-```javascript
-async function submitForm(form) {
-    const formData = new FormData(form);
-    
-    const response = await fetch('https://tu-api.com/contact', {
-        method: 'POST',
-        body: formData
-    });
-    
-    return response.json();
-}
-```
+En Vercel, **Project Settings → Environment Variables**, define:
+   - `RESEND_API_KEY` (requerida): API key de Resend.
+   - `RESEND_FROM` (requerida en la práctica): remitente del email. Debe usar un dominio verificado en Resend.
+     - Ejemplo (si tu dominio verificado es `@contact.automatech.cx`): `Automatech <no-reply@contact.automatech.cx>`
+   - `CONTACT_TO` (opcional): destinatario final de las solicitudes. Por defecto `diego@automatech.cx`.
+   - `ALLOWED_ORIGINS` (opcional): lista separada por comas para validar el header `Origin` (CORS).
+     - Ejemplo: `https://automatech.cx,https://www.automatech.cx`
+
+El endpoint está en `api/contact.js` y el frontend lo llama desde `js/main.js`.
+
+### Notas sobre dominios en Resend
+
+- **Dominio verificado**: si en Resend verificaste `contact.automatech.cx`, el `RESEND_FROM` debe ser algo como `no-reply@contact.automatech.cx`.
+- **El destinatario (`CONTACT_TO`) no depende del dominio verificado**: puede ser `diego@automatech.cx` sin problema.
 
 ## Licencia
 
