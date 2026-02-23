@@ -82,10 +82,11 @@ npm run dev
 
 ## Demo de agente de voz (ElevenLabs)
 
-Se añadió una página de demo lista para compartir: `voice-demo.html`.
+Se añadió una página de demo lista para compartir: `voice-demo.html` (alias estable).
 
 - **Configurar el agente (recomendado)**: edita `voice-demo.config.json` y pega tu `agentId`.
-- **Abrir demo**: `voice-demo.html` (usará `voice-demo.config.json`) o `voice-demo.html?agent=TU_AGENT_ID` (override por URL).
+- **Abrir demo**: `voice-demo.html` (redirige a la variante dentro de `voice-demo-landings/` y conserva query params) o `voice-demo.html?agent=TU_AGENT_ID` (override por URL).
+- **Abrir variante Trasteros directamente**: `voice-demo-landings/voice-demo-trasteros.html`
 - **Configurar fijo (opcional)**: edita `DEFAULT_AGENT_ID` dentro de `voice-demo.html` (no recomendado si ya usas el JSON).
 
 El CTA **“Probar Ahora”** del card **“Agentes Telefónicos”** en `index.html` apunta a esta demo.

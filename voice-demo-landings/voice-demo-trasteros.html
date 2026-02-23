@@ -10,12 +10,12 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Demo | Agente de Voz para Trasteros - Automatech">
     <meta property="og:description" content="Prueba una demo de voz pensada para operadores de trasteros. Haz clic, permite el micrófono y habla con el agente.">
-    <meta property="og:image" content="assets/images/agente-telefonico.webp">
+    <meta property="og:image" content="/assets/images/agente-telefonico.webp">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:url" content="https://automatech.cx/voice-demo-trasteros.html">
+    <meta property="og:url" content="https://automatech.cx/voice-demo-landings/voice-demo-trasteros.html">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/logos/automatech-favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/assets/logos/automatech-favicon.svg">
 
     <!-- Google Fonts - Lexend Deca & Roboto Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,15 +23,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Compiled Tailwind CSS -->
-    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="/dist/output.css">
 </head>
 <body class="font-lexend bg-light-50 text-text-primary antialiased overflow-x-hidden">
     <header class="sticky top-0 z-50 bg-light-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-            <a href="index.html" class="flex items-center gap-3 min-w-0">
-                <img src="assets/logos/automatech-logo.svg" alt="Automatech" class="h-8 w-auto">
+            <a href="/index.html" class="flex items-center gap-3 min-w-0">
+                <img src="/assets/logos/automatech-logo.svg" alt="Automatech" class="h-8 w-auto">
             </a>
-            <a href="index.html#servicios" class="btn-cta font-lexend px-4 py-2 bg-white text-text-primary font-semibold rounded-lg border border-light-300 whitespace-nowrap">
+            <a href="/index.html#servicios" class="btn-cta font-lexend px-4 py-2 bg-white text-text-primary font-semibold rounded-lg border border-light-300 whitespace-nowrap">
                 Volver a la web
             </a>
         </div>
@@ -49,7 +49,7 @@
     <script>
         (async function () {
             const DEFAULT_AGENT_ID = '';
-            const CONFIG_URL = 'voice-demo.config.json';
+            const CONFIG_URL = '/voice-demo.config.json';
             const WIDGET_SRC = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
 
             const params = new URLSearchParams(window.location.search);
