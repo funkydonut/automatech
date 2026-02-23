@@ -25,17 +25,22 @@
     <link rel="stylesheet" href="dist/output.css">
 </head>
 <body class="font-lexend bg-light-50 text-text-primary antialiased overflow-x-hidden">
-    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-light-300">
+    <header class="sticky top-0 z-50 bg-light-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
             <a href="index.html" class="flex items-center gap-3 min-w-0">
                 <img src="assets/logos/automatech-logo.svg" alt="Automatech" class="h-8 w-auto">
-                <span class="font-lexend text-sm text-text-secondary hidden sm:inline truncate">Demo de agente de voz</span>
             </a>
             <a href="index.html#servicios" class="btn-cta font-lexend px-4 py-2 bg-white text-text-primary font-semibold rounded-lg border border-light-300 whitespace-nowrap">
                 Volver a la web
             </a>
         </div>
     </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-6">
+        <h1 class="font-lexend text-2xl sm:text-3xl font-bold leading-tight">
+            Demo de agente de voz para operadores de trasteros
+        </h1>
+    </main>
 
     <!-- ElevenLabs Widget Mount -->
     <elevenlabs-convai id="voice-agent"></elevenlabs-convai>
