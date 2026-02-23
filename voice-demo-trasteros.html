@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo | Agente de Voz (Trasteros) - Automatech</title>
+    <meta name="description" content="Demo de agente de voz para operadores de trasteros. Prueba la interacción por voz en tu navegador, sin integraciones.">
+
+    <!-- Open Graph (LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Demo | Agente de Voz para Trasteros - Automatech">
+    <meta property="og:description" content="Prueba una demo de voz pensada para operadores de trasteros. Haz clic, permite el micrófono y habla con el agente.">
+    <meta property="og:image" content="assets/images/agente-telefonico.webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://automatech.cx/voice-demo-trasteros.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logos/automatech-favicon.svg">
+
+    <!-- Google Fonts - Lexend Deca & Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="font-lexend bg-light-50 text-text-primary antialiased overflow-x-hidden">
+    <header class="sticky top-0 z-50 bg-light-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+            <a href="index.html" class="flex items-center gap-3 min-w-0">
+                <img src="assets/logos/automatech-logo.svg" alt="Automatech" class="h-8 w-auto">
+            </a>
+            <a href="index.html#servicios" class="btn-cta font-lexend px-4 py-2 bg-white text-text-primary font-semibold rounded-lg border border-light-300 whitespace-nowrap">
+                Volver a la web
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-6">
+        <p class="text-text-secondary text-sm text-center max-w-3xl mx-auto">
+            Demo de agente de voz para <span class="font-semibold">operadores de trasteros</span>
+        </p>
+    </main>
+
+    <!-- ElevenLabs Widget Mount -->
+    <elevenlabs-convai id="voice-agent"></elevenlabs-convai>
+
+    <script>
+        (async function () {
+            const DEFAULT_AGENT_ID = '';
+            const CONFIG_URL = 'voice-demo.config.json';
+            const WIDGET_SRC = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
+
+            const params = new URLSearchParams(window.location.search);
+            const agentFromUrl = (params.get('agent') || '').trim();
+
+            let agentId = agentFromUrl || DEFAULT_AGENT_ID;
+
+            if (!agentId) {
+                try {
+                    const resp = await fetch(CONFIG_URL, { cache: 'no-store' });
+                    const json = await resp.json();
+                    if (json && typeof json.agentId === 'string') {
+                        agentId = json.agentId.trim();
+                    }
+                } catch {
+                    // If served via file:// or fetch fails, keep empty.
+                }
+            }
+
+            const agentEl = document.getElementById('voice-agent');
+
+            if (agentId) {
+                agentEl.setAttribute('agent-id', agentId);
+            }
+
+            // Load widget only after agentId resolution to avoid race conditions.
+            const widgetScript = document.createElement('script');
+            widgetScript.src = WIDGET_SRC;
+            widgetScript.async = true;
+            widgetScript.type = 'text/javascript';
+            document.body.appendChild(widgetScript);
+        })();
+    </script>
+</body>
+</html>
