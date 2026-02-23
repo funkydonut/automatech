@@ -23,36 +23,6 @@
 
     <!-- Compiled Tailwind CSS -->
     <link rel="stylesheet" href="dist/output.css">
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        /* Local overrides to avoid global landing CSS affecting this demo page. */
-        body {
-            font-family: var(--font-lexend, "Lexend Deca", sans-serif);
-        }
-
-        body :where(p, span) {
-            font-family: inherit !important;
-        }
-
-        body :where(code, pre, kbd, samp) {
-            font-family: "Roboto Mono", monospace !important;
-        }
-
-        /* Prevent global button[type="submit"] rules from styling the embedded widget. */
-        .convai-scope :where(button[type="submit"]) {
-            border: initial !important;
-            box-shadow: none !important;
-            transform: none !important;
-        }
-
-        .convai-scope :where(button[type="submit"]:hover, button[type="submit"]:active) {
-            transform: none !important;
-            box-shadow: none !important;
-        }
-    </style>
 </head>
 <body class="bg-light-50 text-text-primary antialiased overflow-x-hidden">
     <header class="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-light-300">
@@ -67,59 +37,8 @@
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div class="flex flex-col gap-6">
-            <div class="flex items-end justify-between gap-4 flex-wrap">
-                <div class="min-w-0">
-                    <h1 class="text-2xl sm:text-3xl font-bold leading-tight">Prueba el agente de voz</h1>
-                </div>
-            </div>
-
-            <section aria-label="Pasos" class="grid gap-3 sm:grid-cols-3">
-                <div class="bg-white border border-light-300 rounded-xl p-4">
-                    <div class="flex items-center gap-2">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-light-100 border border-light-300">
-                            <i data-lucide="mic" class="w-4 h-4 text-text-secondary"></i>
-                        </span>
-                        <div class="font-semibold">Permite micrófono</div>
-                    </div>
-                    <p class="text-sm text-text-secondary mt-2">El navegador te pedirá permiso al iniciar.</p>
-                </div>
-                <div class="bg-white border border-light-300 rounded-xl p-4">
-                    <div class="flex items-center gap-2">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-light-100 border border-light-300">
-                            <i data-lucide="message-circle" class="w-4 h-4 text-text-secondary"></i>
-                        </span>
-                        <div class="font-semibold">Habla natural</div>
-                    </div>
-                    <p class="text-sm text-text-secondary mt-2">Pregunta cualquier cosa para ver la interacción.</p>
-                </div>
-                <div class="bg-white border border-light-300 rounded-xl p-4">
-                    <div class="flex items-center gap-2">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-light-100 border border-light-300">
-                            <i data-lucide="shield" class="w-4 h-4 text-text-secondary"></i>
-                        </span>
-                        <div class="font-semibold">Demo segura</div>
-                    </div>
-                    <p class="text-sm text-text-secondary mt-2">No hay llamadas ni datos externos.</p>
-                </div>
-            </section>
-
-            <section aria-label="Widget" class="bg-white border border-light-300 rounded-2xl p-4 sm:p-6">
-                <div id="agent-warning" class="hidden mb-4 rounded-xl bg-light-100 border border-light-300 p-4">
-                    <div class="font-semibold">Falta configurar el agente</div>
-                    <p class="text-sm text-text-secondary mt-1">
-                        Configura <code class="text-xs">voice-demo.config.json</code> o añade <code class="text-xs">?agent=TU_AGENT_ID</code> a la URL.
-                    </p>
-                </div>
-
-                <div class="convai-scope">
-                    <!-- ElevenLabs Widget Mount -->
-                    <elevenlabs-convai id="voice-agent"></elevenlabs-convai>
-                </div>
-            </section>
-        </div>
-    </main>
+    <!-- ElevenLabs Widget Mount -->
+    <elevenlabs-convai id="voice-agent"></elevenlabs-convai>
 
     <script>
         (async function () {
@@ -145,16 +64,9 @@
             }
 
             const agentEl = document.getElementById('voice-agent');
-            const warningEl = document.getElementById('agent-warning');
 
-            if (!agentId) {
-                warningEl?.classList.remove('hidden');
-            } else {
+            if (agentId) {
                 agentEl.setAttribute('agent-id', agentId);
-            }
-
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
             }
 
             // Load widget only after agentId resolution to avoid race conditions.
