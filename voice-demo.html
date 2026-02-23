@@ -9,27 +9,20 @@
     <!-- Open Graph (LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Demo | Agente de Voz - Automatech">
-    <meta property="og:description" content="Abre la demo y prueba el agente de voz.">
-    <meta property="og:image" content="assets/images/agente-telefonico.webp">
+    <meta property="og:description" content="Prueba la interacción por voz en tu navegador. Haz clic, permite el micrófono y habla con el agente.">
+    <meta property="og:image" content="/assets/images/agente-telefonico.webp">
     <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://automatech.cx/voice-demo.html">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/logos/automatech-favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/assets/logos/automatech-favicon.svg">
 
-    <!-- Google Fonts - Lexend Deca & Roboto Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <!-- Compiled Tailwind CSS -->
-    <link rel="stylesheet" href="dist/output.css">
-
-    <meta http-equiv="refresh" content="0; url=voice-demo-landings/voice-demo-trasteros.html">
+    <meta http-equiv="refresh" content="0; url=voice-demo-landings/voice-demo.html">
 
     <script>
         // Preserve query params (e.g. ?agent=...) when using the alias URL.
         (function () {
-            const target = new URL('voice-demo-landings/voice-demo-trasteros.html', window.location.href);
+            const target = new URL('voice-demo-landings/voice-demo.html', window.location.href);
             target.search = window.location.search;
             window.location.replace(target.toString());
         })();
@@ -37,7 +30,7 @@
 </head>
 <body>
     <noscript>
-        Esta página redirige a <a href="voice-demo-landings/voice-demo-trasteros.html">voice-demo-landings/voice-demo-trasteros.html</a>.
+        Esta página redirige a <a href="voice-demo-landings/voice-demo.html">voice-demo-landings/voice-demo.html</a>.
     </noscript>
 </body>
 </html>
